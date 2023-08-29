@@ -1,0 +1,519 @@
+.subscribe-popup-parent {
+    position: fixed;
+    z-index: 9999;
+    bottom: 20px;
+    right:
+        20px;
+    background-color: white;
+    width: 500px;
+    height: 510px;
+    border-radius:
+        6px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    animation: 500ms slideIn cubic-bezier(.35, .57, .4, .89);
+    visibility: hidden;
+}
+
+.upper-half {
+    position: absolute;
+    top: 0;
+    display: block;
+    clear: both;
+    min-height: 185px;
+    width: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:
+        url('https://mcusercontent.com/4586001b135729fc977641e60/images/32add94b-1067-4429-99ea-20d5c6ee3ccd.jpg');
+}
+
+.lower-half {
+    padding: 200px 30px 30px;
+    text-align: center;
+}
+
+.invisible-div {
+    visibility: hidden;
+    height: 0;
+}
+
+.popup-email-input {
+    background-color: #F3F2FA;
+    border: 1px solid #E9E3FE;
+    border-radius: 5px;
+    display:
+        inline-block;
+    min-height: 50px;
+    min-width: 50px;
+    padding: 0 0.8em;
+    vertical-align: middle;
+    width: 100%;
+    margin: 0 0 12px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.subs-submit-button {
+    background: linear-gradient(228.24deg, #5469DB 3.18%, #8383E0 93.01%);
+    border: 0 none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    min-height: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    height: 36px;
+    letter-spacing: -0.5px;
+    line-height: 18px;
+    margin-right: 0;
+    overflow: hidden;
+    padding: 0 18px;
+    text-align: center;
+    width: 100%;
+}
+
+.lower-half>.desk-copy>h3 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    margin: 0;
+}
+
+.lower-half>.desk-copy>p {
+    font-size: 14px;
+    margin: 0 0 1em;
+    font-family: 'Roboto',
+        sans-serif;
+    font-style: normal;
+    color: #525F7F;
+}
+
+.lower-half>.mobile-copy {
+    display: none;
+}
+
+.close-popup {
+    display:
+        block !important;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    cursor:
+        pointer;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    z-index: 2;
+}
+
+.close-popup::before {
+    transform: rotate(45deg);
+    background-color: #414141;
+    content: '';
+    position: absolute;
+    left: 14px;
+    height: 14px;
+    top: 8px;
+    width:
+        2px;
+}
+
+.close-popup::after {
+    transform: rotate(-45deg);
+    background-color:
+        #414141;
+    content: '';
+    position: absolute;
+    left: 14px;
+    height: 14px;
+    top: 8px;
+    width: 2px;
+}
+
+.checks {
+    text-align: start;
+    margin-left: auto;
+    margin-right: auto;
+    width: 220px;
+}
+
+
+.checks>p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: 'Roboto',
+        sans-serif;
+    font-style: normal;
+    color: #525F7F;
+}
+
+@media only screen and (max-width: 768px) {
+    .subscribe-popup-parent {
+        bottom: 0;
+        right: 0;
+        height: unset;
+        width: 100%;
+        padding: 20px 30px;
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+        border-radius:
+            0px;
+    }
+
+    .lower-half>.mobile-copy {
+        display: block;
+    }
+
+    .upper-half {
+        display: none;
+    }
+
+    .desk-copy {
+        display: none;
+    }
+
+    .lower-half {
+        padding: 0px;
+    }
+
+    .lower-half>.mobile-copy>h3 {
+        font-size: 16px;
+        margin: 0;
+        font-weight: 600;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+    }
+
+    .close-popup {
+        right: 10px;
+        top: 10px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .lower-half>.mobile-copy>p {
+        font-size: 14px;
+        margin: 0 0 0 0;
+        font-family: 'Roboto',
+            sans-serif;
+        font-style: normal;
+        color: #525F7F;
+    }
+
+    .checks {
+        display: none;
+    }
+
+    .subs-submit-button,
+    .popup-email-input {
+        min-height: 35px;
+        font-size: 14px;
+    }
+
+    .close-popup::before,
+    .close-popup::after {
+        left: 9px;
+        height: 12px;
+        top: 5px;
+    }
+
+}
+
+#captcha_element {
+  margin: 10px;
+}
+
+    .site-nav-item {
+        display: inline-block;
+        padding: 5px 25px;
+        color: #696969;
+        font-weight: 600;
+        font-size: 17.5px;
+        opacity: 0.7;
+    }
+
+    .site-nav-item>a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .site-nav-item:hover {
+        text-decoration: none;
+        opacity: 1;
+    }
+
+    .site-nav-item-selected {
+        color: #44b3e0 !important;
+    }
+
+    .site-nav-item-selected>a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .site-nav-icon {
+        height: 15px;
+        margin: -5px 0 0;
+    }
+
+    .site-logo {
+        height: 50px;
+    }
+
+    .zerodha-logo {
+        height: 25px;
+    }
+
+    .site-mast {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @media(min-width: 961px) and (max-width: 1060px) {
+        .site-nav-item {
+            padding: 5px 15px;
+        }
+    }
+
+    @media(min-width: 961px) {
+        .site-mast-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .site-mast-right-mobile {
+            display: none;
+        }
+    }
+
+    @media(max-width: 960px) {
+        .site-mast {
+            padding: 0 20px;
+        }
+
+        .site-logo {
+            height: 40px;
+        }
+
+        .site-mast-right {
+            display: none;
+        }
+
+        .site-mast-right-mobile>img {
+            transform: scaleX(-1);
+            height: 25px;
+        }
+    }
+
+    .header {
+        max-width: 1350px;
+        margin: 0 auto;
+    }
+
+
+    .sidenav {
+        height: 100%;
+        /* 100% Full-height */
+        width: 0;
+        /* 0 width - change this with JavaScript */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1000;
+        /* Stay on top */
+        top: 0;
+        /* Stay at the top */
+        right: 0;
+
+        background-color: white;
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding-top: 60px;
+        /* Place content 60px from the top */
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in the sidenav */
+    }
+
+    /* The navigation menu links */
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 20px;
+        display: block;
+        transition: 0.3s;
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover {
+        color: #808080;
+    }
+
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    .closebtn {
+        color: #696969;
+        opacity: 0.7;
+    }
+
+    @media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+        }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+    }
+
+    #overlay {
+        position: fixed;
+        /* Sit on top of the page content */
+        display: none;
+        /* Hidden by default */
+        width: 100%;
+        /* Full width (cover the whole page) */
+        height: 100%;
+        /* Full height (cover the whole page) */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Black background with opacity */
+        z-index: 999;
+        /* Specify a stack order in case you're using a different order for other elements */
+        cursor: pointer;
+        /* Add a pointer on hover */
+    }
+
+    #mobile-item a {
+        display: none;
+    }
+
+    .nav-item-subscribe {
+        opacity: unset;
+        height: unset;
+        width: unset;
+    }
+
+
+    .nav-item-subscribe a button {
+        opacity: unset;
+        height: unset;
+        min-height: unset;
+        width: unset !important;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #fff;
+        background-color: #5268db;
+        font-family: inherit;
+        -webkit-text-decoration: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        border: 0;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        border-color: #5268db;
+        background-image: linear-gradient(31deg, rgba(215, 178, 233, 0.4) 0%, rgba(83, 105, 220, 0.4) 100%);
+        box-sizing: border-box;
+        font-family: Roboto, sans-serif !important;
+        font-size: 14px;
+    }
+
+    .mobile-item-fadeIn {
+        animation: fadeIn ease-in-out 1s;
+        -webkit-animation: fadeIn ease-in-out 1s;
+        -moz-animation: fadeIn ease-in-out 1s;
+        -o-animation: fadeIn ease-in-out 1s;
+        -ms-animation: fadeIn ease-in-out 1s;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0.35;
+        }
+
+        100% {
+            opacity: 0.7;
+        }
+    }
+
+    @-moz-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0.35;
+        }
+
+        100% {
+            opacity: 0.7;
+        }
+    }
+
+    @-webkit-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0.35;
+        }
+
+        100% {
+            opacity: 0.7;
+        }
+    }
+
+    @-o-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0.35;
+        }
+
+        100% {
+            opacity: 0.7;
+        }
+    }
+
+    @-ms-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0.35;
+        }
+
+        100% {
+            opacity: 0.7;
+        }
+    }
+
+    #nav-main-links {
+        display: none;
+    }
